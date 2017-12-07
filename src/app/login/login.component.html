@@ -1,0 +1,33 @@
+<div class="section section-image" style="background-image: url('assets/img/daniel-olahh.jpg');height:100%;padding:0%;padding-top:calc((100vh - 470px) / 2);padding-bottom:calc((100vh - 470px) / 2);">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 ml-auto mr-auto">
+                <div class="card card-register align-self-center" *ngIf="loading"><h3 class="title">เข้าสู่ระบบ</h3>
+                    กรุณารอสักครู่... </div>
+              <div class="card card-register align-self-center" *ngIf="!loading">
+                  <h3 class="title">เข้าสู่ระบบ</h3>
+                  <form class="register-form"
+                        (submit)="onLoggedin($event)"
+                        action="javascript:void(0)">
+                      <label>อีเมลล์</label>
+                      <div class="input-group form-group-no-border">
+                          <span class="input-group-addon">
+                              <i class="nc-icon nc-email-85"></i>
+                          </span>
+                          <input type="email" name="email" id="email" class="form-control" placeholder="อีเมลล์" required>
+                      </div>
+
+                      <label>รหัสผ่าน</label>
+                      <div class="input-group form-group-no-border">
+                          <span class="input-group-addon">
+                              <i class="nc-icon nc-key-25"></i>
+                          </span>
+                          <input type="password" name="password" id="password" class="form-control" placeholder="รหัสผ่าน" required>
+                      </div>
+                      <button class="btn btn-danger btn-block btn-round" type="submit">เข้าสู่ระบบ</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
